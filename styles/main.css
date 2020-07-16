@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:regular,thin|Josefin+Sans:regular,bold);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+body {
+    background-color: #D2DBEE;
+    color: #210124;
+}
+
+/* Header Section */
+
+.header__logo-and-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__logo {
+
+}
+
+.header__title {
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.user-name {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Main Section */
+
+.journal-form {
+
+
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.concepts-covered {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#concepts{
+    font-family: 'Lato', sans-serif;
+}
+
+.journal-box {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+#journal-text {
+    font-family: 'Lato', sans-serif;
+}
+
+.mood-dropdown {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin-Sans', sans-serif;
+
+}
+
+.mood-title {
+    font-family: 'Josefin-Sans', sans-serif;
+}
+
+#mood {
+    font-family: 'Lato', sans-serif;
+}
+
