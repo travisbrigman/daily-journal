@@ -28,8 +28,8 @@
     <main>
         <form class="journal-form">
             <fieldset class="date-picker">
-                <label>date of entry</label>
-                <input type="datetime-local"  placeholder="yyyy-mm-dd" name="journal-entry-date" value="2020-07-15T09:50"
+                <label>Date of Entry</label>
+                <input type="datetime-local" id="calendar" placeholder="yyyy-mm-dd" name="journal-entry-date" value="2020-07-15T09:50"
                     min="2020-07-15T24:00">
             </fieldset>
 
@@ -39,8 +39,8 @@
             </fieldset>
 
             <fieldset class="journal-box">
-                <label>Journal Entry</label>
-                <textarea id="journal-text" name="journal-text" rows=8 cols="40">
+                <label class="journal-box-title">Journal Entry</label>
+                <textarea class="journal-box-background" id="journal-text" name="journal-text" rows=8 cols="40">
                     Thoughts go here...
                 </textarea>
             </fieldset>

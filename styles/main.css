@@ -8,11 +8,14 @@ body {
 }
 
 /* Header Section */
+head {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 
 .header__logo-and-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    
 }
 
 .header__logo {
@@ -21,7 +24,7 @@ body {
 
 .header__title {
     font-family: 'Josefin Sans', sans-serif;
-
+    color: #26547c;
 }
 
 .user-name {
@@ -30,50 +33,99 @@ body {
 
 /* Main Section */
 
+label {
+    padding: 10px;
+}
+
 .journal-form {
-
-
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
 }
 
 .date-picker {
+    color: #26547c;
     display: flex;
     flex-direction: column;
+    order: 1;
     font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    
+}
+
+#calendar {
+    background-color: #D2DBEE;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.12), -4px -4px 12px rgba(197, 197, 197, 0.08);
 }
 
 .concepts-covered {
     display: flex;
     flex-direction: column;
     font-family: 'Josefin Sans', sans-serif;
+    color: #26547c;
+    border: none;
+    order: 0;
 }
 
 #concepts{
     font-family: 'Lato', sans-serif;
+    width: 320px;
+    height: 125px;
 }
 
+.journal-box-title {
+    font-family: 'Josefin-Sans', sans-serif;
+}
 .journal-box {
+    color: #26547c;
     display: flex;
     flex-direction: column;
-    font-family: 'Josefin Sans', sans-serif;
-
+    order: 3;  
+    border: none;
 }
 
 #journal-text {
     font-family: 'Lato', sans-serif;
 }
 
+.journal-box-background {
+    background: rgba(254, 254, 255, 0.37);
+    border: none;
+    border-radius: 24px;
+    box-shadow: inset -4px -4px 12px #E0E0E0, inset 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
 .mood-dropdown {
+    flex-grow: 4;
     display: flex;
     flex-direction: column;
+    order: 2;
     font-family: 'Josefin-Sans', sans-serif;
-
+    border: none;
 }
 
 .mood-title {
+    color: #26547c;
     font-family: 'Josefin-Sans', sans-serif;
 }
 
 #mood {
+    background-color: #D2DBEE;
+    width: 179px;
+    height: 53px;
     font-family: 'Lato', sans-serif;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.12), -4px -4px 12px rgba(197, 197, 197, 0.08);
 }
+input {
+    font-family: 'Lato', sans-serif;
+    border-radius: 25px;
+    order: 4;
+    border: none;
+    background: rgba(254, 254, 255, 0.37);
+    box-shadow: inset -4px -4px 12px #E0E0E0, inset 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
 
