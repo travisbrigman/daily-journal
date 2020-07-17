@@ -10,19 +10,14 @@
 
 <body>
 <!--Header section of site. Contains Logo & Title, and the journaler's name-->
-    <head>
-        <section class="header__logo-and-title">
-            <div class="header__logo">
-                <img src="" alt="">
-            </div>
+    <header>
             <div class="header__title">
                 <h1>Daily Journal</h1>
             </div>
-        </section>
         <div class="user-name">
             <h2>Travis' Journal</h2>
         </div>
-    </head>
+    </header>
 
 <!--Main section with form component that will have a date picker, concepts covered list, mood dropdown, and text area field as well as a save button-->
     <main>
@@ -55,7 +50,7 @@
                     <option value="Solemn">Solemn</option>
                 </select>
             </fieldset>
-            <input type="submit" value="Save Entry">
+            <input id="save-button" type="submit" value="Save Entry">
         </form>
 
     </main>

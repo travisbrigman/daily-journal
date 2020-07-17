@@ -3,23 +3,14 @@
 
 
 body {
-    background-color: #D2DBEE;
+    background-color: #D2DBEE; 
     color: #210124;
 }
 
 /* Header Section */
-head {    
+header {    
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
-}
-
-.header__logo-and-title {
-    
-}
-
-.header__logo {
-
 }
 
 .header__title {
@@ -28,7 +19,9 @@ head {
 }
 
 .user-name {
-    font-family: 'Lato', sans-serif;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Lato', sans-serif;    
 }
 
 /* Main Section */
@@ -39,7 +32,7 @@ label {
 
 .journal-form {
     display: flex;
-    flex-direction: row wrap;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -125,6 +118,16 @@ input {
     border: none;
     background: rgba(254, 254, 255, 0.37);
     box-shadow: inset -4px -4px 12px #E0E0E0, inset 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#save-button {
+    background-color: #D2DBEE;
+    width: 179px;
+    height: 53px;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.12), -4px -4px 12px rgba(197, 197, 197, 0.08);
 }
 
 
