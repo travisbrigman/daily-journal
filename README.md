@@ -1,4 +1,3 @@
-# daily-journal
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+
+![wire frame](../Daily Journal WireFrame-Page-2.png)
