@@ -7,11 +7,11 @@
 export const JournalEntryComponent = (entry) => {
     return `
         <section id="entry--${entry.id}" class="journalEntry">
-    <h1>${ "concept covered" }<h1>
-    <article>
-        ${}
+    <h1 class= "journal-box-title">${entry.concept}<h1>
+    <article id= "journal-text" class= "journal-box, journal-box-background">
+        ${entry.entry}
     </article>
-    <div> ${} <div>
+    <div class= "mood-title"> ${entry.mood} <div>
 
         </section>
     `
