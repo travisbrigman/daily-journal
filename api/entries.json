@@ -1,27 +1,58 @@
- 
- {
-     "journal": [
-        {
-            "id": 1,
-            "date": "07/24/2025",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "Ok"
-        },
-        {
-            "id": 2,
-            "date": "07/26/2025",
-            "concept": "Javascript Function",
-            "entry": "We talked about the single responsibility principle.",
-            "mood": "Good"
-        },
-        {
-            "id": 3,
-            "date": "07/30/2025",
-            "concept": "HTML & CSS",
-            "entry": "Learned more than I cared to about CSS.",
-            "mood": "Tired"
-        }
-    ]
-
- }
+{
+  "journal": [
+    {
+      "id": 1,
+      "date": "07/24/2025",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Ok"
+    },
+    {
+      "id": 2,
+      "date": "07/26/2025",
+      "concept": "Javascript Function",
+      "entry": "We talked about the single responsibility principle.",
+      "mood": "Good"
+    },
+    {
+      "id": 3,
+      "date": "07/30/2025",
+      "concept": "HTML & CSS",
+      "entry": "Learned more than I cared to about CSS.",
+      "mood": "Tired"
+    },
+    {
+      "date": "2020-07-30T10:43",
+      "concept": "Internet",
+      "entry": "                    Thoughts go here...\n                wooot woot woot woot",
+      "mood": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {}
+      },
+      "id": 4
+    },
+    {
+      "date": "2020-07-31T13:54",
+      "concept": "HTML",
+      "entry": "       \n                does this work now?",
+      "mood": {
+        "0": {},
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {}
+      },
+      "id": 5
+    },
+    {
+      "date": "2020-07-30T14:55",
+      "concept": "dropdown",
+      "entry": "             🇺🇸\n                ",
+      "mood": "Happy",
+      "id": 6
+    }
+  ]
+}

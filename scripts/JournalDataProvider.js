@@ -10,7 +10,17 @@ export const getJournalEntries = () => {
 
 }
 
-
+export const saveJournalEntry = entry => {
+    return fetch('http://localhost:3000/journal', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+    .then(getJournalEntries)
+    //.then(dispatchStateChangeEvent)
+}
 
 
 export const useJournalEntries = () => {
