@@ -19,7 +19,7 @@ export const JournalEntryComponent = (entry) => {
     `
 }
 
-const eventHub = document.querySelector(".journal-form")
+const eventHub = document.querySelector(".main")
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "save-button") {
@@ -32,8 +32,9 @@ eventHub.addEventListener("click", clickEvent => {
             date: entryDate.value,
             concept: entryConcepts.value,
             entry: entryText.value,
-            mood: entryMood.textContent
+            mood: entryMood.value
         }
+        debugger
         saveJournalEntry(newEntry)
     }
 })

@@ -22,37 +22,18 @@
       "mood": "Tired"
     },
     {
-      "date": "2020-07-30T10:43",
-      "concept": "Internet",
-      "entry": "                    Thoughts go here...\n                wooot woot woot woot",
-      "mood": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {}
-      },
-      "id": 4
-    },
-    {
-      "date": "2020-07-31T13:54",
-      "concept": "HTML",
-      "entry": "       \n                does this work now?",
-      "mood": {
-        "0": {},
-        "1": {},
-        "2": {},
-        "3": {},
-        "4": {}
-      },
-      "id": 5
-    },
-    {
       "date": "2020-07-30T14:55",
       "concept": "dropdown",
       "entry": "             🇺🇸\n                ",
       "mood": "Happy",
       "id": 6
+    },
+    {
+      "date": "2020-07-15T09:50",
+      "concept": "",
+      "entry": "        Thoughts go here...\n    ",
+      "mood": "Happy",
+      "id": 9
     }
   ]
 }
