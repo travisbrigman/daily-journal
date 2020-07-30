@@ -34,7 +34,7 @@ eventHub.addEventListener("click", clickEvent => {
             entry: entryText.value,
             mood: entryMood.value
         }
-        debugger
+        
         saveJournalEntry(newEntry)
     }
 })
