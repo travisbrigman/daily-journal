@@ -7,8 +7,7 @@ contentTarget.innerHTML = `
 <form class="journal-form">
 <fieldset class="date-picker">
     <label>Date of Entry</label>
-    <input type="datetime-local" id="calendar" placeholder="yyyy-mm-dd" name="journal-entry-date" value="2020-07-15T09:50"
-        min="2020-07-15T24:00">
+    <input type="datetime-local" id="calendar" placeholder="yyyy-mm-dd" name="journal-entry-date">
 </fieldset>
 
 <fieldset class="concepts-covered">
@@ -18,9 +17,7 @@ contentTarget.innerHTML = `
 
 <fieldset class="journal-box">
     <label class="journal-box-title">Journal Entry</label>
-    <textarea class="journal-box-background" id="journal-text" name="journal-text" placeholder="journal entry" rows="8" cols="40">
-    
-    </textarea>
+    <textarea class="journal-box-background" id="journal-text" name="journal-text" placeholder="journal entry" rows="8" cols="40"></textarea>
 </fieldset>
 
 <fieldset class="mood-dropdown">

@@ -1,6 +1,7 @@
 //responsible for rendering a single journal entry
 
 import { saveJournalEntry } from "./JournalDataProvider.js"
+import { EntryListComponent } from "./JournalEntryList.js"
 
 /*
  *  Purpose: To render a single journal entry as an
@@ -36,5 +37,8 @@ eventHub.addEventListener("click", clickEvent => {
         }
         
         saveJournalEntry(newEntry)
+        //render the latest entry upon save
+        EntryListComponent()
+        console.log("KABOOM")
     }
 })
