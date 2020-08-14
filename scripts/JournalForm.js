@@ -1,6 +1,10 @@
+import { getMoods, useMoods } from "./MoodProvider.js";
 const contentTarget = document.querySelector(".entryForm");
 
-export const JournalFormComponent = () => {
+export const JournalEntryComponent = () => {
+    getMoods().then( () => {
+        const copiedMoods = useMoods() 
+    
   contentTarget.innerHTML = `
 <form class="journal-form">
 <fieldset class="date-picker">
@@ -21,14 +25,21 @@ export const JournalFormComponent = () => {
 <fieldset class="mood-dropdown">
     <label class="mood-title">Mood for the day</label>
     <select name="mood" id="mood">
-        <option value="Happy">Happy</option>
-        <option value="Sad">Sad</option>
-        <option value="Focused">Focused</option>
-        <option value="Angry">Angry</option>
-        <option value="Solemn">Solemn</option>
+        <option value="0">What is your mood?</option>
+        ${
+            copiedMoods.map(
+                (mood) => {
+                    return `<option id="mood--${ mood.id }">${ mood.label }</option>`
+                }
+            ).join("")
+        }
     </select>
 </fieldset>
 </form>
  <input id="save-button" type="submit" value="Save Entry">
 `;
-};
+
+})
+}
+
+

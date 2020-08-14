@@ -1,15 +1,17 @@
 let journal = [];
 
 export const getJournalEntries = () => {
-  return fetch("http://localhost:3000/journal")
-    .then((response) => response.json())
+  return fetch("http://localhost:8088/journal?_expand=mood")
+    // .then((response) => response.text())
+    // .then(text => console.log(text))
+     .then((response) => response.json())
     .then((ParsedEntries) => {
       journal = ParsedEntries;
     });
 };
 
 export const saveJournalEntry = (entry) => {
-  return fetch("http://localhost:3000/journal", {
+  return fetch("http://localhost:8088/journal?_expand=mood", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

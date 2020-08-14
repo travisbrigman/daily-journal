@@ -1,7 +1,7 @@
 //responsible for rendering a single journal entry
 
 import { saveJournalEntry } from "./JournalDataProvider.js";
-import { EntryListComponent } from "./JournalEntryList.js";
+
 
 /*
  *  Purpose: To render a single journal entry as an
@@ -14,7 +14,7 @@ export const JournalEntryComponent = (entry) => {
     <article id= "journal-text" class= "journal-box, journal-box-background">
         ${entry.entry}
     </article>
-    <div class= "mood-title"> ${entry.mood} <div>
+    <div class= "mood-title"> ${entry.mood.label} <div>
 
         </section>
     `;
@@ -28,17 +28,14 @@ eventHub.addEventListener("click", (clickEvent) => {
     const entryConcepts = document.querySelector("#concepts");
     const entryText = document.querySelector("#journal-text");
     const entryMood = document.querySelector("#mood");
-
+    
     const newEntry = {
       date: entryDate.value,
       concept: entryConcepts.value,
       entry: entryText.value,
-      mood: entryMood.value,
+      moodId: entryMood.value
     };
 
-    saveJournalEntry(newEntry).then(
-      EntryListComponent(),
-      console.log("trigger")
-    );
+    saveJournalEntry(newEntry)
   }
 });

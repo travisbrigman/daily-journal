@@ -1,95 +1,47 @@
 {
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Sad"
+    },
+    {
+      "id": 3,
+      "label": "Focused"
+    },
+    {
+      "id": 4,
+      "label": "Angry"
+    },
+    {
+      "id": 5,
+      "label": "Solemn"
+    }
+  ],
   "journal": [
     {
       "date": "2020-08-13T15:37",
       "concept": "SAY WHAAAAT",
       "entry": "🐷",
-      "mood": "Focused",
+      "moodId": 3,
       "id": 1
     },
     {
-      "date": "2020-08-13T15:38",
-      "concept": "try ing this",
-      "entry": "🦆",
-      "mood": "Focused",
-      "id": 2
-    },
-    {
-      "date": "2020-08-13T15:38",
-      "concept": "try ing this",
-      "entry": "🦆",
-      "mood": "Focused",
-      "id": 3
-    },
-    {
-      "date": "2020-08-13T15:39",
-      "concept": "What about this",
-      "entry": "‼️",
-      "mood": "Angry",
-      "id": 4
-    },
-    {
-      "date": "2020-08-13T20:47",
-      "concept": "stuff",
-      "entry": "👅💂🏼‍♀️",
-      "mood": "Focused",
-      "id": 5
-    },
-    {
-      "date": "2020-08-13T20:59",
-      "concept": "dates",
-      "entry": "🦶🏼",
-      "mood": "Focused",
-      "id": 6
-    },
-    {
-      "date": "2020-08-13T21:06",
-      "concept": "Zoo",
-      "entry": "🐻",
-      "mood": "Angry",
+      "date": "2020-08-14T11:35",
+      "concept": "asdf",
+      "entry": "asdf",
+      "moodId": 1,
       "id": 7
     },
     {
-      "date": "2020-08-13T21:24",
-      "concept": "cool",
-      "entry": "asdlkfjlkjalkjsdfl;kasjdf;lkasjdf;lkasjdf;laskdjf;laskdjfl;askdjflasdkjflaskdjf;aslkdjf;alsdkjf;laskdfj",
-      "mood": "Focused",
-      "id": 8
-    },
-    {
-      "date": "2020-08-13T21:28",
-      "concept": "trying again",
-      "entry": "why doesnt this work?",
-      "mood": "Focused",
-      "id": 9
-    },
-    {
-      "date": "2020-08-13T21:29",
-      "concept": "trying again",
-      "entry": "GO TO YOUR HOME!",
-      "mood": "Solemn",
-      "id": 10
-    },
-    {
-      "date": "2020-08-13T21:29",
-      "concept": "trying again",
-      "entry": "GO TO YOUR HOME!",
-      "mood": "Solemn",
-      "id": 11
-    },
-    {
-      "date": "2020-08-13T21:41",
-      "concept": "Internet",
-      "entry": "work work work work",
-      "mood": "Solemn",
-      "id": 12
-    },
-    {
-      "date": "2020-08-13T21:42",
+      "date": "2020-08-14T15:42",
       "concept": "woot",
-      "entry": "woo woot wot",
-      "mood": "Sad",
-      "id": 13
+      "entry": "Solemn, solemn",
+      "moodId": "Solemn",
+      "id": 9
     }
   ]
 }
