@@ -1,13 +1,11 @@
-
-const contentTarget = document.querySelector(".entryForm")
+const contentTarget = document.querySelector(".entryForm");
 
 export const JournalFormComponent = () => {
-
-contentTarget.innerHTML = `
+  contentTarget.innerHTML = `
 <form class="journal-form">
 <fieldset class="date-picker">
     <label>Date of Entry</label>
-    <input type="datetime-local" id="calendar" placeholder="yyyy-mm-dd" name="journal-entry-date">
+    <input type="datetime-local" id="today" placeholder="yyyy-mm-dd" name="journal-entry-date">
 </fieldset>
 
 <fieldset class="concepts-covered">
@@ -32,5 +30,5 @@ contentTarget.innerHTML = `
 </fieldset>
 </form>
  <input id="save-button" type="submit" value="Save Entry">
-`
-}
+`;
+};

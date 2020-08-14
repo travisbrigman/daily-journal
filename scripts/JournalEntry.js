@@ -1,14 +1,14 @@
 //responsible for rendering a single journal entry
 
-import { saveJournalEntry } from "./JournalDataProvider.js"
-import { EntryListComponent } from "./JournalEntryList.js"
+import { saveJournalEntry } from "./JournalDataProvider.js";
+import { EntryListComponent } from "./JournalEntryList.js";
 
 /*
  *  Purpose: To render a single journal entry as an
  *           HTML representation of the data
  */
 export const JournalEntryComponent = (entry) => {
-    return `
+  return `
         <section id="entry--${entry.id}" class="journalEntry">
     <h1 class= "journal-box-title">${entry.concept}<h1>
     <article id= "journal-text" class= "journal-box, journal-box-background">
@@ -17,28 +17,28 @@ export const JournalEntryComponent = (entry) => {
     <div class= "mood-title"> ${entry.mood} <div>
 
         </section>
-    `
-}
+    `;
+};
 
-const eventHub = document.querySelector(".main")
+const eventHub = document.querySelector(".main");
 
-eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "save-button") {
-        const entryDate = document.querySelector("#calendar")
-        const entryConcepts = document.querySelector("#concepts")
-        const entryText = document.querySelector("#journal-text")
-        const entryMood = document.querySelector("#mood")
+eventHub.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "save-button") {
+    const entryDate = document.querySelector("#today");
+    const entryConcepts = document.querySelector("#concepts");
+    const entryText = document.querySelector("#journal-text");
+    const entryMood = document.querySelector("#mood");
 
-        const newEntry = {
-            date: entryDate.value,
-            concept: entryConcepts.value,
-            entry: entryText.value,
-            mood: entryMood.value
-        }
-        
-        saveJournalEntry(newEntry)
-        //render the latest entry upon save
-        EntryListComponent()
-        console.log("KABOOM")
-    }
-})
+    const newEntry = {
+      date: entryDate.value,
+      concept: entryConcepts.value,
+      entry: entryText.value,
+      mood: entryMood.value,
+    };
+
+    saveJournalEntry(newEntry).then(
+      EntryListComponent(),
+      console.log("trigger")
+    );
+  }
+});
