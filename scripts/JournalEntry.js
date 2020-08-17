@@ -15,6 +15,7 @@ export const JournalEntryComponent = (entry) => {
         ${entry.entry}
     </article>
     <div class= "mood-title"> ${entry.mood.label} <div>
+    <button id="deleteEntry--${entry.id}">Delete</button>
 
         </section>
     `;

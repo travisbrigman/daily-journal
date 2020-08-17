@@ -8,7 +8,7 @@
  */
 const eventHub = document.querySelector(".main");
 
-import { useJournalEntries, getJournalEntries } from "./JournalDataProvider.js";
+import { useJournalEntries, getJournalEntries, deleteEntry } from "./JournalDataProvider.js";
 import { JournalEntryComponent } from "./JournalEntry.js";
 
 // DOM reference to where all entries will be rendered
@@ -33,3 +33,17 @@ eventHub.addEventListener("entryStateChanged", () => {
   const latestEntries = useJournalEntries();
 render(latestEntries)
   })
+
+  eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("deleteEntry--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+        console.log(id)
+
+       deleteEntry(id).then(
+           () => {
+            const latestEntries = useJournalEntries();
+               render(latestEntries)
+           }
+       )
+    }
+})
