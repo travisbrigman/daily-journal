@@ -1,10 +1,16 @@
 let journal = [];
 
+const eventHub = document.querySelector(".main");
+
+const dispatchStateChangeEvent = () => {
+  const entryStateChangedEvent = new CustomEvent("entryStateChanged")
+
+  eventHub.dispatchEvent(entryStateChangedEvent)
+}
+
 export const getJournalEntries = () => {
   return fetch("http://localhost:8088/journal?_expand=mood")
-    // .then((response) => response.text())
-    // .then(text => console.log(text))
-     .then((response) => response.json())
+    .then((response) => response.json())
     .then((ParsedEntries) => {
       journal = ParsedEntries;
     });
@@ -17,7 +23,8 @@ export const saveJournalEntry = (entry) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(entry),
-  }).then(getJournalEntries);
+  }).then(getJournalEntries)
+  .then(dispatchStateChangeEvent)
 };
 
 export const useJournalEntries = () => {

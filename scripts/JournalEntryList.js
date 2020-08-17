@@ -6,6 +6,8 @@
  *    there are items in the collection exposed by the
  *    data provider component
  */
+const eventHub = document.querySelector(".main");
+
 import { useJournalEntries, getJournalEntries } from "./JournalDataProvider.js";
 import { JournalEntryComponent } from "./JournalEntry.js";
 
@@ -14,11 +16,20 @@ const entryLog = document.querySelector(".entryLog");
 
 export const EntryListComponent = () => {
   // Use the journal entry data from the data provider component
-
+  
   getJournalEntries().then(() => {
     const entries = useJournalEntries();
-    entryLog.innerHTML += `
-            ${entries.map((entry) => JournalEntryComponent(entry)).join("")}
-        `;
+    render(entries)
   });
-};
+}
+  
+  const render = (arrayOfEntries)  => {
+    entryLog.innerHTML = `
+            ${arrayOfEntries.map((entry) => JournalEntryComponent(entry)).join("")}
+        `;
+  };
+
+eventHub.addEventListener("entryStateChanged", () => {
+  const latestEntries = useJournalEntries();
+render(latestEntries)
+  })
