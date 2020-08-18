@@ -1,7 +1,6 @@
 //responsible for rendering a single journal entry
 
-import { saveJournalEntry, useJournalEntries } from "./JournalDataProvider.js";
-import { EntryListComponent } from "./JournalEntryList.js";
+import { saveJournalEntry } from "./JournalDataProvider.js";
 
 /*
  *  Purpose: To render a single journal entry as an
@@ -15,6 +14,7 @@ export const JournalEntryComponent = (entry) => {
         ${entry.entry}
     </article>
     <div class= "mood-title"> ${entry.mood.label} <div>
+    <div class= "instructor-title"> ${entry.instructor.first_name} ${entry.instructor.last_name} <div>
     <button id="deleteEntry--${entry.id}">Delete</button>
 
         </section>
@@ -30,13 +30,15 @@ eventHub.addEventListener("click", (clickEvent) => {
     const entryConcepts = document.querySelector("#concepts");
     const entryText = document.querySelector("#journal-text");
     const entryMood = document.querySelector("#mood")
+    const entryInstructor = document.querySelector("#instructor")
     
     
       const newEntry = {
         date: entryDate.value,
         concept: entryConcepts.value,
         entry: entryText.value,
-        moodId: parseInt(entryMood.value)
+        moodId: parseInt(entryMood.value),
+        instructorId: parseInt(entryInstructor.value)
       };
       saveJournalEntry(newEntry)
   }

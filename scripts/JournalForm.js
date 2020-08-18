@@ -1,10 +1,15 @@
 import { getMoods, useMoods } from "./MoodProvider.js";
+import { getInstructors, useInstructors } from "./InstructorProvider.js"
 
 const contentTarget = document.querySelector(".entryForm");
 
 export const JournalEntryComponent = () => {
   getMoods().then(() => {
     const copiedMoods = useMoods();
+
+  getInstructors().then(() => {
+      const instructorArray = useInstructors();
+  
 
     contentTarget.innerHTML = `
 <form class="journal-form">
@@ -34,8 +39,20 @@ export const JournalEntryComponent = () => {
           .join("")}
     </select>
 </fieldset>
+<fieldset class="instructor-dropdown">
+    <label class="instructor-title">Instructor for the day</label>
+    <select name="instructor" id="instructor">
+        <option value="0">Which instructor taught?</option>
+        ${instructorArray
+          .map((instructor) => {
+            return `<option value="${instructor.id}">${instructor.first_name} ${instructor.last_name}</option>`;
+          })
+          .join("")}
+    </select>
+</fieldset>
 </form>
  <input id="save-button" type="submit" value="Save Entry">
 `;
   });
+})
 };

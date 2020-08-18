@@ -9,7 +9,7 @@ const dispatchStateChangeEvent = () => {
 }
 
 export const getJournalEntries = () => {
-  return fetch("http://localhost:8088/journal?_expand=mood")
+  return fetch("http://localhost:8088/journal?_expand=mood&_expand=instructor")
     .then((response) => response.json())
     .then((ParsedEntries) => {
       journal = ParsedEntries;
@@ -17,7 +17,7 @@ export const getJournalEntries = () => {
 };
 
 export const saveJournalEntry = (entry) => {
-  return fetch("http://localhost:8088/journal?_expand=mood", {
+  return fetch("http://localhost:8088/journal", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
