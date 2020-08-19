@@ -39,7 +39,7 @@ export const JournalEntryComponent = () => {
       const instructorArray = useInstructors();
 
       contentTarget.innerHTML = `
-<form class="journal-form">
+<form class="journal-form" id="journal-form">
 <fieldset class="date-picker">
     <label>Date of Entry</label>
     <input type="datetime-local" id="today" placeholder="yyyy-mm-dd" name="journal-entry-date">

@@ -50,5 +50,6 @@ eventHub.addEventListener("click", (clickEvent) => {
       newEntry.id = parseInt(id.value)
       updateEntry(newEntry);
     }
+    document.getElementById("journal-form").reset();
   }
 });

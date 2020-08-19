@@ -43,7 +43,6 @@ export const deleteEntry = entryId => {
 }
 
 export const updateEntry = entry => {
-  console.log(entry.id)
   return fetch(`http://localhost:8088/journal/${entry.id}`, {
     method: "PUT",
     headers: {
