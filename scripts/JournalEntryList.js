@@ -8,7 +8,12 @@
  */
 const eventHub = document.querySelector(".main");
 
-import { useJournalEntries, getJournalEntries, deleteEntry } from "./JournalDataProvider.js";
+import {
+  useJournalEntries,
+  getJournalEntries,
+  deleteEntry,
+  updateEntry,
+} from "./JournalDataProvider.js";
 import { JournalEntryComponent } from "./JournalEntry.js";
 
 // DOM reference to where all entries will be rendered
@@ -16,34 +21,44 @@ const entryLog = document.querySelector(".entryLog");
 
 export const EntryListComponent = () => {
   // Use the journal entry data from the data provider component
-  
+
   getJournalEntries().then(() => {
     const entries = useJournalEntries();
-    render(entries)
+    render(entries);
   });
-}
-  
-  const render = (arrayOfEntries)  => {
-    entryLog.innerHTML = `
-            ${arrayOfEntries.map((entry) => JournalEntryComponent(entry)).join("")}
+};
+
+const render = (arrayOfEntries) => {
+  entryLog.innerHTML = `
+            ${arrayOfEntries
+              .map((entry) => JournalEntryComponent(entry))
+              .join("")}
         `;
-  };
+};
 
 eventHub.addEventListener("entryStateChanged", () => {
   const latestEntries = useJournalEntries();
-render(latestEntries)
-  })
+  render(latestEntries);
+});
 
-  eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id.startsWith("deleteEntry--")) {
-        const [prefix, id] = clickEvent.target.id.split("--")
-        console.log(id)
+eventHub.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id.startsWith("deleteEntry--")) {
+    const [prefix, id] = clickEvent.target.id.split("--");
 
-       deleteEntry(id).then(
-           () => {
-            const latestEntries = useJournalEntries();
-               render(latestEntries)
-           }
-       )
-    }
-})
+    deleteEntry(id).then(() => {
+      const latestEntries = useJournalEntries();
+      render(latestEntries);
+    });
+  }
+
+  if (clickEvent.target.id.startsWith("editEntry--")) {
+    const [notUsed, entryId] = clickEvent.target.id.split("--");
+
+    const message = new CustomEvent("editEntryButtonClicked", {
+      detail: {
+        entryId: parseInt(entryId),
+      },
+    });
+    eventHub.dispatchEvent(message);
+  }
+});

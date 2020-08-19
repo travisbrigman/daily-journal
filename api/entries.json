@@ -44,20 +44,28 @@
   ],
   "journal": [
     {
-      "date": "2020-08-17T15:11",
-      "concept": "ASDF",
-      "entry": "CAN YOU HEAR ME NOW?",
-      "moodId": 2,
-      "instructorId": 1,
+      "date": "2020-08-19T11:33",
+      "concept": "cool",
+      "entry": "🥁",
+      "moodId": 4,
+      "instructorId": 2,
       "id": 1
     },
     {
-      "date": "2020-08-18T13:11",
-      "concept": "Fever",
-      "entry": "Conall is sick.",
-      "moodId": 2,
-      "instructorId": 2,
+      "date": "2020-08-19T11:36",
+      "concept": "Internet",
+      "entry": "🎻",
+      "moodId": 5,
+      "instructorId": 3,
       "id": 2
+    },
+    {
+      "date": "2020-08-19T13:22",
+      "concept": "Internet",
+      "entry": "🔵",
+      "moodId": 3,
+      "instructorId": 2,
+      "id": 3
     }
   ]
 }
