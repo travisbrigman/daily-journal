@@ -50,6 +50,11 @@ export const JournalEntryComponent = () => {
     <input type="text" id="concepts" required size="12" placeholder="concept">
 </fieldset>
 
+<fieldset class="tags">
+    <label>tags</label>
+    <input type="text" id="tags" required size="10" placeholder="tags">
+</fieldset>
+
 <fieldset class="journal-box">
     <label class="journal-box-title">Journal Entry</label>
     <textarea class="journal-box-background" id="journal-text" name="journal-text" placeholder="journal entry" rows="8" cols="40"></textarea>
